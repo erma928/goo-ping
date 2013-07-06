@@ -68,6 +68,14 @@ Given /^I exist as an unconfirmed user$/ do
   create_unconfirmed_user
 end
 
+Given(/^I click "(.*?)" to login with OmniAuth service$/) do |service|
+  pending # express the regexp above with the code you wish you had
+end
+
+Given(/^OmniAuth service returns logged in success message$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
 ### WHEN ###
 When /^I sign in with valid credentials$/ do
   create_visitor
@@ -132,6 +140,14 @@ When /^I look at the list of users$/ do
   visit '/'
 end
 
+When(/^OmniAuth service returns an email address new to the system$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
+When(/^OmniAuth service returns an email address existed in the system$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
 ### THEN ###
 Then /^I should be signed in$/ do
   page.should have_content "Logout"
@@ -189,3 +205,5 @@ Then /^I should see my name$/ do
   create_user
   page.should have_content @user[:name]
 end
+
+
