@@ -247,6 +247,8 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
   config.omniauth :github, ENV['GITHUB_TOKEN'], ENV['GITHUB_SECRET']
   config.omniauth :douban, ENV['DOUBAN_TOKEN'], ENV['DOUBAN_SECRET']
+  # config.omniauth :qq_connect, ENV['QQ_CONNECT_APP_KEY'], ENV['QQ_CONNECT_APP_SECRET'], scope: "get_user_info,get_fanslist,add_share"
+  # config.omniauth :weibo, ENV['WEIBO_KEY'], ENV['WEIBO_SECRET']
   # config.omniauth :twitter, Setting.twitter_token, Setting.twitter_secret
   # config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('/tmp'), :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id', :require => 'omniauth-openid'
 
