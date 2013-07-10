@@ -1,4 +1,7 @@
 GooPing::Application.routes.draw do
+  resources :photos
+
+
   authenticated :user do
     root :to => 'home#index'
   end
