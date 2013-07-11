@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130711090102) do
+ActiveRecord::Schema.define(:version => 20130711090549) do
 
   create_table "categories", :force => true do |t|
     t.integer  "type"
@@ -30,6 +30,19 @@ ActiveRecord::Schema.define(:version => 20130711090102) do
   end
 
   add_index "facilities", ["property_id"], :name => "index_facilities_on_property_id"
+
+  create_table "feedbacks", :force => true do |t|
+    t.decimal  "rating"
+    t.text     "comments"
+    t.integer  "owner_id"
+    t.string   "owner_type"
+    t.integer  "provider_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "feedbacks", ["owner_id"], :name => "index_feedbacks_on_owner_id"
+  add_index "feedbacks", ["provider_id"], :name => "index_feedbacks_on_provider_id"
 
   create_table "omniauth_services", :force => true do |t|
     t.integer  "user_id"
