@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130711085350) do
+ActiveRecord::Schema.define(:version => 20130711090102) do
 
   create_table "categories", :force => true do |t|
     t.integer  "type"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(:version => 20130711085350) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "facilities", :force => true do |t|
+    t.integer  "type"
+    t.integer  "property_id"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "facilities", ["property_id"], :name => "index_facilities_on_property_id"
 
   create_table "omniauth_services", :force => true do |t|
     t.integer  "user_id"
