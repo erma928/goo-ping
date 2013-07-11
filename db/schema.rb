@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130710095028) do
+ActiveRecord::Schema.define(:version => 20130711080716) do
 
   create_table "omniauth_services", :force => true do |t|
     t.integer  "user_id"
@@ -33,6 +33,19 @@ ActiveRecord::Schema.define(:version => 20130710095028) do
   end
 
   add_index "photos", ["imageable_id"], :name => "index_photos_on_imageable_id"
+
+  create_table "properties", :force => true do |t|
+    t.boolean  "indoor"
+    t.decimal  "area"
+    t.integer  "owner_id"
+    t.string   "owner_type"
+    t.integer  "owner_status"
+    t.integer  "usage_status"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "properties", ["owner_id"], :name => "index_properties_on_owner_id"
 
   create_table "roles", :force => true do |t|
     t.string   "name"
