@@ -1,9 +1,9 @@
-<%= simple_form_for(@photo) do |f| %>
+<%= simple_form_for(@photo, html: {multipart: true}) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.association :actor %>
-    <%= f.input :image %>
+    <%= f.association :imageable %>
+    <%= f.file_field :image %>
     <%= f.input :title %>
   </div>
 

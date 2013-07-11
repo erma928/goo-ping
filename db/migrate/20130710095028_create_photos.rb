@@ -1,12 +1,12 @@
 class CreatePhotos < ActiveRecord::Migration
   def change
     create_table :photos do |t|
-      t.references :actor, polymorphic: {default: 'User'}
+      t.references :imageable, polymorphic: true
       t.string :image
       t.string :title
 
       t.timestamps
     end
-    add_index :photos, :actor_id
+    add_index :photos, :imageable_id
   end
 end

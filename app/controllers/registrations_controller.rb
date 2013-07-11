@@ -1,5 +1,9 @@
 class RegistrationsController < Devise::RegistrationsController
     
+  def edit
+    @user = User.find(current_user.id)
+    @user.photos.build if @user.photos.empty?
+  end  
   # For omniauth service user, skip password check
   def update
     @user = User.find(current_user.id)

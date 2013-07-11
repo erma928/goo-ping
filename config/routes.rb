@@ -1,7 +1,4 @@
 GooPing::Application.routes.draw do
-  resources :photos
-
-
   authenticated :user do
     root :to => 'home#index'
   end
@@ -15,6 +12,7 @@ GooPing::Application.routes.draw do
         :omniauth_callbacks => "users/omniauth_callbacks" 
     }
   
+    resources :photos
     resources :users
   end
 end

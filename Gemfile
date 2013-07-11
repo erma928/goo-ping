@@ -13,6 +13,15 @@ gem 'cancan'
 gem 'devise'
 gem 'devise_invitable'
 gem 'figaro'
+gem 'rolify'
+
+# 上传组件
+gem "carrierwave"
+# 图像处理
+gem "mini_magick"
+# 用于组合小图片
+# gem "css3buttons", :git => "git://github.com/thetron/css3buttons_rails_helpers.git"
+
 gem 'omniauth'
 gem 'omniauth-douban-oauth2'
 gem 'omniauth-github'
@@ -20,7 +29,7 @@ gem 'omniauth-github'
 # gem 'omniauth-renren'
 # gem 'omniauth-taobao'
 # gem 'omniauth-weibo-oauth2'
-gem 'rolify'
+
 gem 'simple_form'
 gem 'thin'
 group :development do

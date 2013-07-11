@@ -9,10 +9,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   has_many :omniauth_services, dependent: :destroy
+  has_many :photos, as: :imageable
   
   # Setup accessible (or protected) attributes for your model
   attr_accessible :role_ids, :as => :admin
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
+  attr_accessible :photos_attributes
+  
+  accepts_nested_attributes_for :photos
 
   # add auth to already signed in user
   def bind_service(response)

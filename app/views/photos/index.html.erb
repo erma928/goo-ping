@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <th>Actor</th>
+    <th>Imageable</th>
     <th>Image</th>
     <th>Title</th>
     <th></th>
@@ -12,7 +12,7 @@
 
 <% @photos.each do |photo| %>
   <tr>
-    <td><%= photo.actor %></td>
+    <td><%= photo.imageable %></td>
     <td><%= photo.image %></td>
     <td><%= photo.title %></td>
     <td><%= link_to 'Show', photo %></td>
