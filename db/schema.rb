@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130711090549) do
+ActiveRecord::Schema.define(:version => 20130711091134) do
+
+  create_table "address_types", :force => true do |t|
+    t.string   "name"
+    t.boolean  "active"
+    t.integer  "updated_by"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "categories", :force => true do |t|
     t.integer  "type"
