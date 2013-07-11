@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130711091134) do
+ActiveRecord::Schema.define(:version => 20130711092147) do
 
   create_table "address_types", :force => true do |t|
     t.string   "name"
@@ -20,6 +20,23 @@ ActiveRecord::Schema.define(:version => 20130711091134) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "addresses", :force => true do |t|
+    t.integer  "address_type_id"
+    t.string   "line1"
+    t.string   "line2"
+    t.string   "city"
+    t.string   "state_or_province"
+    t.string   "postal_code"
+    t.integer  "updated_by"
+    t.integer  "owner_id"
+    t.string   "owner_type"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "addresses", ["address_type_id"], :name => "index_addresses_on_address_type_id"
+  add_index "addresses", ["owner_id"], :name => "index_addresses_on_owner_id"
 
   create_table "categories", :force => true do |t|
     t.integer  "type"

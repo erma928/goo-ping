@@ -1,4 +1,7 @@
 GooPing::Application.routes.draw do
+  resources :addresses
+
+
   resources :properties
 
 
