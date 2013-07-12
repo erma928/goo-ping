@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
 
   has_many :omniauth_services, dependent: :destroy
   has_many :photos, as: :imageable
+  has_many :properties, as: :owner
+  has_many :feedbacks, as: :owner
   
   # Setup accessible (or protected) attributes for your model
   attr_accessible :role_ids, :as => :admin

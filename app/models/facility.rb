@@ -1,4 +1,6 @@
 class Facility < ActiveRecord::Base
-  belongs_to :property
   attr_accessible :description, :type
+  belongs_to :property
+  has_many :feedbacks, as: :owner
+  
 end
