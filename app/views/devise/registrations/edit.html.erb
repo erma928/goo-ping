@@ -5,8 +5,8 @@
   <%= f.input :name, :autofocus => true, label: t("simple_form.registrations.name")%>
   <%= f.input :email, :required => true %>
   <%= f.simple_fields_for :photos do |p| %>
-	<%= image_tag p.object.image_url %> <br/>
-    <%= p.file_field :image, label: false %>
+	<%= image_tag p.object.image_url, id:'user_avatar' %> <br/>
+    <%= p.input :image, as: :file, label: false %>
   <% end %>
   <%= f.input :password, :autocomplete => "off", label: t("devise.views.registrations.edit.password"), hint: t("devise.views.registrations.edit.change_pass_tip"), :required => false %>
   <%= f.input :password_confirmation, label: t("devise.views.registrations.edit.password_confirmation"), :required => false %>
