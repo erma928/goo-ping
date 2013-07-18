@@ -14,11 +14,6 @@
       <nav class="navbar-inner">
         <div class="container">
           <%= render 'layouts/navigation' %>
-		  <div>
-		    <%= form_tag '', class: 'locale', method: 'get' do %>
-              <%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), :onchange => 'this.form.submit()' %>
-            <% end %>
-		  </div>
         </div>
       </nav>
     </div>

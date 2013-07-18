@@ -1,8 +1,4 @@
 GooPing::Application.routes.draw do
-  resources :addresses
-
-
-  resources :properties
 
 
   authenticated :user do
@@ -12,13 +8,14 @@ GooPing::Application.routes.draw do
   
   match ":locale" => "home#index"
   
-  scope "(:locale)" do
-    devise_for :users, :controllers => { 
-        :registrations => 'registrations',
-        :omniauth_callbacks => "users/omniauth_callbacks" 
-    }
-  
-    resources :photos
-    resources :users
-  end
+  resources :addresses
+  resources :properties
+
+  devise_for :users, :controllers => { 
+      :registrations => 'registrations',
+      :omniauth_callbacks => "users/omniauth_callbacks" 
+  }
+
+  resources :photos
+  resources :users
 end
