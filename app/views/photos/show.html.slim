@@ -1,0 +1,13 @@
+p#notice= notice
+p
+  b Imageable:
+  = @photo.imageable
+p
+  b Image:
+  = @photo.image
+p
+  b Title:
+  = @photo.title
+= link_to 'Edit', edit_photo_path(@photo)
+| \
+| \#{link_to 'Back', photos_path}

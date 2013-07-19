@@ -1,0 +1,28 @@
+p#notice= notice
+p
+  b Address type:
+  = @address.address_type
+p
+  b Line1:
+  = @address.line1
+p
+  b Line2:
+  = @address.line2
+p
+  b City:
+  = @address.city
+p
+  b State or province:
+  = @address.state_or_province
+p
+  b Postal code:
+  = @address.postal_code
+p
+  b Updated by:
+  = @address.updated_by
+p
+  b Owner:
+  = @address.owner
+= link_to 'Edit', edit_address_path(@address)
+| \
+| \#{link_to 'Back', addresses_path}

@@ -1,0 +1,10 @@
+h2= t("devise.views.registrations.new.title")
+= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f|
+  = f.error_notification
+  = display_base_errors resource
+  = f.input :name, :autofocus => true, label: t("simple_form.registrations.name")
+  = f.input :email, :required => true
+  = f.input :password, :required => true, label: t("devise.views.registrations.edit.password")
+  = f.input :password_confirmation, :required => true, label: t("devise.views.registrations.edit.password_confirmation")
+  = f.button :submit, t("devise.views.registrations.new.submit"), :class => 'btn-primary'
+= render "devise/shared/links"

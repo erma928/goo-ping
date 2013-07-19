@@ -1,0 +1,19 @@
+p#notice= notice
+p
+  b Indoor:
+  = @property.indoor
+p
+  b Area:
+  = @property.area
+p
+  b Owner:
+  = @property.owner
+p
+  b Owner status:
+  = @property.owner_status
+p
+  b Usage status:
+  = @property.usage_status
+= link_to 'Edit', edit_property_path(@property)
+| \
+| \#{link_to 'Back', properties_path}

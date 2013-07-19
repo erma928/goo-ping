@@ -1,0 +1,8 @@
+= simple_form_for(@photo, html: {multipart: true}) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.association :imageable
+    = f.file_field :image
+    = f.input :title
+  .form-actions
+    = f.button :submit

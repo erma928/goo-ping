@@ -1,0 +1,5 @@
+h3= t("views.home")
+- @users.each do |user|
+  p
+    = t("views.users.user")
+    | : #{link_to user.name, user}

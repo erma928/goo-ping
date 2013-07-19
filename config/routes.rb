@@ -6,8 +6,6 @@ GooPing::Application.routes.draw do
   end
   root :to => "home#index"
   
-  match ":locale" => "home#index"
-  
   resources :addresses
   resources :properties
 

@@ -1,0 +1,9 @@
+h3= t("views.users.user")
+- @user.photos.each do |p|
+  p
+    = image_tag p.image_url
+p
+  = t("views.users.user")
+  | : #{@user.name}
+p
+  | Email: #{@user.email if @user.email}
