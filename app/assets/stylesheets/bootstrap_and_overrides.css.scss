@@ -1,3 +1,4 @@
 @import "bootstrap";
-body { padding-top: 60px; }
+//the padding-top useful when have a .navbar .navbar-fixed-top at the top of page, to set 20px clearance
+//body { padding-top: 60px; } 
 @import "bootstrap-responsive";

@@ -1,8 +1,47 @@
 zh-CN:
   views:
-    title: 谷拼
-    home: 主页
     back: 后退
+    home:
+      title: 谷拼：每个人的兴趣小组
+      description: 谷拼：每个人的兴趣小组
+      welcome_to_gooping: 每个人自己的兴趣小组
+      welcome_lead: 您可以参加或者组织自己身边的兴趣小组，也可以展示才华，提供活动场所，取得回报。
+      or: 或者
+      featured_list_intro: 光阴何须虚度，精彩就在身边！
+      join_activity_intro: 发展兴趣爱好，加入属于自己的兴趣小组，共同学习进步。
+      organize_activity_intro: 寻找志同道合的人，发挥组织才能，体现领导价值。
+      show_talent_intro: 天生我才必有用，秀出自我，引导大家进步，取得回报。
+      share_property_intro: 有合适的活动场所？自己确定出租时间和费用，物尽其用。
+      learn_more: 了解更多
+      news_and_articles: 谷拼播报
+      news_recreational: 找到组织了！
+      news_recreational_content: 乒乓高手以球会友。
+      news_professional: 谷拼成就中国合伙人
+      news_professional_content: 海龟通过谷拼快速找到志同道合的创业伙伴。
+      news_curriculum: 暑期孩子们的天地：谷拼外语学习小组
+      news_curriculum_content: 有了一群小伙伴，课外学习不再枯燥。
+      read_more: 更多内容
+    navigation:
+      join_activity: 参加活动
+      organize_activity: 组织活动
+      show_talent: 展示才华
+      share_property: 活动场所
+      dashboard: 管理面板
+      property: 我的场所
+      reservations: 我的活动
+      account: 我的帐户
+      billing: 我的帐单
+    footer:
+      partners: 合作伙伴
+      about_us: 关于谷拼
+      privileges: 优惠
+      faqs: 常见问题
+      terms: 使用条款
+      privacy_policy: 隐私政策
+      press: 媒体
+      contact_us: 联系我们
+      mobile: 手机版
+      copyrights: © 2013 GooPing. All Rights Reserved.
     users:
       users: 用户列表
       user: 用户

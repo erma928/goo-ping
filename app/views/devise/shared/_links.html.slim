@@ -13,7 +13,4 @@
 - if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks'
   = link_to t("devise.views.links.resend_unlock"), new_unlock_path(resource_name)
   br/
-- if devise_mapping.omniauthable?
-  - resource_class.omniauth_providers.each do |provider|
-    = link_to t("devise.views.links.omni_auth", provider: provider.to_s.titleize), omniauth_authorize_path(resource_name, provider)
-    br/
+= render "devise/shared/omniauth_links"

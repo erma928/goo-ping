@@ -14,6 +14,6 @@ table
       td= photo.title
       td= link_to 'Show', photo
       td= link_to 'Edit', edit_photo_path(photo)
-      td= link_to 'Destroy', photo, method: :delete, data:   confirm: 'Are you sure?'  
+      td= link_to 'Destroy', photo, method: :delete, data: {confirm: 'Are you sure?' }
 br/
 = link_to 'New Photo', new_photo_path

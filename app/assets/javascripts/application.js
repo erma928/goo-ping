@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require jquery.liveValidation
+//= require bxslider
 //= require_tree .

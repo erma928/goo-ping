@@ -1,5 +1,76 @@
-h3= t("views.home")
-- @users.each do |user|
-  p
-    = t("views.users.user")
-    | : #{link_to user.name, user}
+#feature.scrollblock data-type="background" data-speed="3"
+  .container.welcome
+    .row-fluid
+      .span6
+        #welcome-sign
+          h1 = t("views.home.welcome_to_gooping")
+          p.lead
+            = t("views.home.welcome_lead")
+        .call2action
+          .span4
+            a.btn-signup-facebook href="#"
+              span.icon-facebook<> 
+              = t("devise.navigation.omniauth_sign_up")
+          .span1 = t("views.home.or")
+          .span7
+            = link_to new_user_registration_path, class: "btn-signup-email"
+              span.icon-mail
+              = t('devise.navigation.sign_up')
+  .clearfix == "&nbsp;"
+section.featured-list-container
+  section.container
+    h2 = t("views.home.featured_list_intro")
+    .featured-list
+      ul.bxslider.hide
+        / slider for featured activities on the home page
+        - @featured_activities.each do |a|
+          li
+            = link_to activity_path(a)
+              .featured-list-car
+                .car-thumb
+                  = image_tag a.thumb_url
+                h3 = a.price_tag
+                h4 = a.title
+                p 
+                  span.icon-map-marker == "&nbsp;"
+                  = a.address
+section.how-to-wrapper
+  .container
+    .span3
+      = image_tag "renter-icon.png", alt: t("views.navigation.join_activity")
+      h3.color-owner = t("views.navigation.join_activity")
+      p = t("views.home.join_activity_intro")
+      = link_to t("views.home.learn_more"), join_activity_intro_path, class: "btn btn-small"
+    .span3
+      = image_tag "renter-icon.png", alt: t("views.navigation.organize_activity")
+      h3.color-owner = t("views.navigation.organize_activity")
+      p = t("views.home.organize_activity_intro")
+      = link_to t("views.home.learn_more"), organize_activity_intro_path, class: "btn btn-small"
+    .span3
+      = image_tag "owner-icon.png", alt: t("views.navigation.show_talent")
+      h3.color-owner = t("views.navigation.show_talent")
+      p = t("views.home.show_talent_intro")
+      = link_to t("views.home.learn_more"), show_talent_intro_path, class: "btn btn-small"
+    .span3
+      = image_tag "owner-icon.png", alt: t("views.navigation.share_property")
+      h3.color-owner = t("views.navigation.share_property")
+      p = t("views.home.share_property_intro")
+      = link_to t("views.home.learn_more"), share_property_intro_path, class: "btn btn-small"
+section.news
+  .container
+    h2
+      span.icon-bullhorn == "&nbsp;"
+      = t("views.home.news_and_articles")
+    .span4
+      h4 = t("views.home.news_recreational")
+      p = t("views.home.news_recreational_content")
+      = link_to t("views.home.read_more"), news_recreational_content_path, class: "btn btn-small"
+    .span4
+      h4 = t("views.home.news_professional")
+      p = t("views.home.news_professional_content")
+      = link_to t("views.home.read_more"), news_professional_content_path, class: "btn btn-small"
+    .span4.last
+      h4 = t("views.home.news_curriculum")
+      p = t("views.home.news_curriculum_content")
+      = link_to t("views.home.read_more"), news_curriculum_content_path, class: "btn btn-small"
+      

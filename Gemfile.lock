@@ -39,6 +39,7 @@ GEM
     bootstrap-sass (2.3.2.0)
       sass (~> 3.2)
     builder (3.0.4)
+    bxslider-rails (4.1.0)
     cancan (1.6.10)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -98,6 +99,8 @@ GEM
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
+    font-awesome-rails (3.2.1.2)
+      railties (>= 3.2, < 5.0)
     gherkin (2.12.0)
       multi_json (~> 1.3)
     hashie (2.0.5)
@@ -232,6 +235,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass
+  bxslider-rails
   cancan
   capybara
   carrierwave
@@ -243,6 +247,7 @@ DEPENDENCIES
   email_spec
   factory_girl_rails
   figaro
+  font-awesome-rails
   jquery-rails
   launchy
   mini_magick

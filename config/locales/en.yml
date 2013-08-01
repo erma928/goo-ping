@@ -3,4 +3,8 @@
 
 en:
   views:
-    title: "Goo Ping"
+    home:
+      title: "Goo Ping: local interest group for everybody"
+      description: "Goo Ping: local interest group for everybody"
+    footer:
+      copyrights: © 2013 GooPing. All Rights Reserved.

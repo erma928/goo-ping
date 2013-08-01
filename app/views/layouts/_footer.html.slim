@@ -1,0 +1,40 @@
+footer#footer
+  .container
+    .row
+      #partner.get-in-touch
+        h4 = t("views.footer.partners")
+        ul
+          li
+            a.partner-logo#directasia href="#" 
+              em DirectAsia.com
+          li
+            a.partner-logo#blk71 href="#" 
+          li
+            a.partner-logo#prr2013 href="#" 
+          li
+            a#fb-color href="#"
+              i.icon-facebook-sign
+          li    
+            a#tw-color href="#"
+              i.icon-twitter-sign
+          li  
+            a#gp-color href="#"
+              i.icon-google-plus-sign
+    #footer_menu
+      = link_to t("views.footer.about_us"), about_us_path
+      a.temp
+      = link_to t("views.footer.privileges"), privileges_path
+      a.temp
+      = link_to t("views.footer.faqs"), faqs_path
+      a.temp
+      = link_to t("views.footer.terms"), terms_path
+      a.temp
+      = link_to t("views.footer.privacy_policy"), privacy_policy_path
+      a.temp
+      = link_to t("views.footer.press"), press_path
+      a.temp
+      = link_to t("views.footer.contact_us"), contact_us_path
+      a.temp
+      = link_to t("views.footer.mobile"), mobile_path
+    p.center 
+      = t("views.footer.copyrights") 

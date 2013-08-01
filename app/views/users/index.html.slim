@@ -1,6 +1,6 @@
 h3= t "views.users.users"
 .span8
-  table.table.table-condensed
+  table.table.table-condensed.table-hover
     thead
       tr
         th
@@ -23,4 +23,4 @@ h3= t "views.users.users"
           td
             a.btn.btn-mini data-toggle="modal" href="#role-options-#{user.id}" type="button"  Change role
             = render user
-          td= link_to("Delete user", user_path(user), :data =>   confirm=("Are you sure?" ) , :method => :delete, :class => 'btn btn-mini') unless user == current_user
+          td= link_to("Delete user", user_path(user), data: {confirm: "Are you sure?"}, method: :delete, class: 'btn btn-mini') unless user == current_user
