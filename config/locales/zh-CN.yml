@@ -41,7 +41,7 @@ zh-CN:
       press: 媒体
       contact_us: 联系我们
       mobile: 手机版
-      copyrights: © 2013 GooPing. All Rights Reserved.
+      copyrights: © 2013 谷拼版权所有。
     users:
       users: 用户列表
       user: 用户
@@ -49,6 +49,16 @@ zh-CN:
       email: 电子邮件
       registered: 注册时间
       role: 角色
+      verify_phone:
+        verify_phone_number: 手机验证
+        why_needs_to_verify_phone_number: 为什么需要手机验证？
+        verifying_phone_explained: 手机验证是参加或组织兴趣活动的重要一环。通过手机号码，用户可以接受邀请，得到实时更新等等
+        phone_number: 手机号码
+        country_code: 中国+86
+        eg_phone_number: 如：139XXXXXXXX
+        submit_phone_number: 发送号码
+        verification_code: 验证码
+        submit_verification_code: 发送验证码
   date:
     abbr_day_names:
     - 日

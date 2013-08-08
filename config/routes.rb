@@ -45,5 +45,11 @@ GooPing::Application.routes.draw do
   get 'mobile', to:'home#index', as: :mobile
 
   resources :photos
-  resources :users  
+  resources :users 
+    
+  resource :user do
+    get 'verify_phone', to: :get_verify_phone
+    post 'verify_phone', to: :verify_phone
+    post 'send_verify_code'
+  end
 end

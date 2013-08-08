@@ -6,16 +6,17 @@
           h1 = t("views.home.welcome_to_gooping")
           p.lead
             = t("views.home.welcome_lead")
-        .call2action
-          .span4
-            a.btn-signup-facebook href="#"
-              span.icon-facebook<> 
-              = t("devise.navigation.omniauth_sign_up")
-          .span1 = t("views.home.or")
-          .span7
-            = link_to new_user_registration_path, class: "btn-signup-email"
-              span.icon-mail
-              = t('devise.navigation.sign_up')
+        - unless user_signed_in?    
+          .call2action
+            .span4
+              a.btn-signup-facebook href="#"
+                span.icon-facebook<> 
+                = t("devise.navigation.omniauth_sign_up")
+            .span1 = t("views.home.or")
+            .span7
+              = link_to new_user_registration_path, class: "btn-signup-email"
+                span.icon-mail
+                = t('devise.navigation.sign_up')
   .clearfix == "&nbsp;"
 section.featured-list-container
   section.container

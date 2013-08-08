@@ -1,0 +1,24 @@
+#page
+  .container.mainPage
+    = render "user_header"
+    .row
+      .span10
+        h2 = t("views.users.verify_phone.verify_phone_number")
+        .well
+          h4 = t("views.users.verify_phone.why_needs_to_verify_phone_number")
+          br/
+          p = t("views.users.verify_phone.verifying_phone_explained")
+        h3 = t("views.users.verify_phone.phone_number")
+        #verify_form
+          = simple_form_for @user, url: send_verify_code_user_path, html: {class: "form-inline"} do |f|
+            .input-prepend
+              span.add-on = t("views.users.verify_phone.country_code")
+              = f.input_field :phone, placeholder: t("views.users.verify_phone.eg_phone_number"), label: false
+              = f.submit t("views.users.verify_phone.submit_phone_number"), class: "btn"
+        h3 = t("views.users.verify_phone.verification_code")
+        = simple_form_for @user, url: verify_phone_user_path, html: {class: "form-inline"} do |f|
+          = f.input_field :phone_verification_code, label: false
+          = f.hidden_field :phone
+          = f.submit t("views.users.verify_phone.submit_verification_code"), class: "btn"
+                
+          
