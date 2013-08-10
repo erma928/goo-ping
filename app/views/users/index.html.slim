@@ -1,26 +1,27 @@
-h3= t "views.users.users"
-.span8
-  table.table.table-condensed.table-hover
-    thead
-      tr
-        th
-          = t("views.users.username")
-        th
-          = t("views.users.email")
-        th
-          = t("views.users.registered")
-        th
-          = t("views.users.role")
-        th
-        th
-    tbody
-      - @users.each do |user|
+.container
+  h3= t "views.users.users"
+  .span8
+    table.table.table-condensed.table-hover
+      thead
         tr
-          td= link_to user.name, user
-          td= user.email
-          td= user.created_at.to_date
-          td= user.roles.first.name.titleize unless user.roles.first.nil?
-          td
-            a.btn.btn-mini data-toggle="modal" href="#role-options-#{user.id}" type="button"  Change role
-            = render user
-          td= link_to("Delete user", user_path(user), data: {confirm: "Are you sure?"}, method: :delete, class: 'btn btn-mini') unless user == current_user
+          th
+            = t("views.users.username")
+          th
+            = t("views.users.email")
+          th
+            = t("views.users.registered")
+          th
+            = t("views.users.role")
+          th
+          th
+      tbody
+        - @users.each do |user|
+          tr
+            td= link_to user.name, user
+            td= user.email
+            td= user.created_at.to_date
+            td= user.roles.first.name.titleize unless user.roles.first.nil?
+            td
+              a.btn.btn-mini data-toggle="modal" href="#role-options-#{user.id}" type="button"  Change role
+              = render user
+            td= link_to("Delete user", user_path(user), data: {confirm: "Are you sure?"}, method: :delete, class: 'btn btn-mini') unless user == current_user

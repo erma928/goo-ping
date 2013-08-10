@@ -26,5 +26,9 @@ class User < ActiveRecord::Base
     uid = response["uid"]
     omniauth_services.create(provider: provider, uid: uid)
   end
+  
+  def phone_confirmed?
+    if phone then true else false end
+  end
     
 end

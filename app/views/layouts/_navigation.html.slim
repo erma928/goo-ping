@@ -19,29 +19,31 @@
             span.icon-caret-down
           ul.dropdown-menu
             li
-              = link_to user_dashboard_path
+              = link_to dashboard_user_path
                 i.icon-dashboard>
                 = t('views.navigation.dashboard')
             li
-              = link_to user_property_path
+              = link_to property_user_path
                 i.icon-key> 
                 = t('views.navigation.property')
             li
-              = link_to user_reservations_path
+              = link_to reservations_user_path
                 i.icon-group> 
                 = t('views.navigation.reservations')
             li
-              = link_to user_account_path
+              = link_to account_user_path
                 i.icon-cogs> 
                 = t('views.navigation.account')
             li
-              = link_to user_billing_path
+              = link_to billing_user_path
                 i.icon-exclamation-sign> 
                 = t('views.navigation.billing')
             li.divider          
       	    - if current_user.has_role? :admin
       	      li
-      	        = link_to t('devise.navigation.admin'), users_path
+      	        = link_to users_path
+                  i.icon-adn>
+                  = t('devise.navigation.admin')
       	    li
       	      = link_to destroy_user_session_path, {:method=>'delete'}
                 i.icon-signout>

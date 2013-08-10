@@ -29,12 +29,6 @@ GooPing::Application.routes.draw do
   get 'news_professional_content', to:'home#index', as: :news_professional_content
   get 'news_curriculum_content', to:'home#index', as: :news_curriculum_content
   
-  get 'user_dashboard', to:'home#index', as: :user_dashboard
-  get 'user_property', to:'home#index', as: :user_property
-  get 'user_reservations', to:'home#index', as: :user_reservations
-  get 'user_account', to:'home#index', as: :user_account
-  get 'user_billing', to:'home#index', as: :user_billing
-  
   get 'about_us', to:'home#index', as: :about_us
   get 'privileges', to:'home#index', as: :privileges
   get 'faqs', to:'home#index', as: :faqs
@@ -51,5 +45,11 @@ GooPing::Application.routes.draw do
     get 'verify_phone', to: :get_verify_phone
     post 'verify_phone', to: :verify_phone
     post 'send_verify_code'
+
+    get 'dashboard'
+    get 'property'
+    get 'reservations'
+    get 'account'
+    get 'billing'
   end
 end

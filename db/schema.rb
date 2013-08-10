@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130804075533) do
+ActiveRecord::Schema.define(:version => 20130810022324) do
 
   create_table "address_types", :force => true do |t|
     t.string   "name"
@@ -140,6 +140,7 @@ ActiveRecord::Schema.define(:version => 20130804075533) do
     t.string   "invited_by_type"
     t.string   "phone"
     t.string   "phone_verification_code"
+    t.string   "unconfirmed_phone"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

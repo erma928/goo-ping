@@ -14,6 +14,27 @@ class UsersController < ApplicationController
     @user = current_user
   end
   
+  def dashboard
+    authorize! :dashboard, @user
+    @user = current_user
+  end
+  
+  def property
+    @user = current_user
+  end
+  
+  def reservations
+    @user = current_user
+  end
+  
+  def account
+    @user = current_user
+  end
+  
+  def billing
+    @user = current_user
+  end
+  
   def update
     authorize! :update, @user, :message => 'Not authorized as an administrator.'
     @user = User.find(params[:id])

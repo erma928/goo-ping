@@ -3,7 +3,12 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
 
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_path, :alert => exception.message
+    # reaction for custom action and subject
+    if exception.action == :dashboard 
+      redirect_to verify_phone_user_path
+    else
+      redirect_to root_path, :alert => exception.message
+    end
   end
   
   protected
