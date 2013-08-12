@@ -1,21 +1,21 @@
 ul.nav.nav-tabs
-  li
+  li class=("active" if action_name == 'dashboard')
     = link_to dashboard_user_path
       i.icon-dashboard>
       = t('views.navigation.dashboard')
-  li
+  li class=("active" if action_name == 'property')
     = link_to property_user_path
       i.icon-key> 
       = t('views.navigation.property')
-  li
+  li class=("active" if action_name == 'reservations')
     = link_to reservations_user_path
       i.icon-group> 
       = t('views.navigation.reservations')
-  li
+  li class=("active" if ['account', 'get_verify_phone'].include? action_name )
     = link_to account_user_path
       i.icon-cogs> 
       = t('views.navigation.account')
-  li
+  li class=("active" if action_name == 'billing')
     = link_to billing_user_path
       i.icon-exclamation-sign> 
       = t('views.navigation.billing')

@@ -1,0 +1,6 @@
+= content_for :content do
+  #page
+    .container.mainPage
+      = render 'users/user_header'
+      = yield
+= render template: 'layouts/application'

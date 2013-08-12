@@ -1,26 +1,3 @@
-#page
-  .container.mainPage
-    ul.nav.nav-tabs
-      li
-        = link_to dashboard_user_path
-          i.icon-dashboard>
-          = t('views.navigation.dashboard')
-      li
-        = link_to property_user_path
-          i.icon-key> 
-          = t('views.navigation.property')
-      li
-        = link_to reservations_user_path
-          i.icon-group> 
-          = t('views.navigation.reservations')
-      li.active
-        = link_to account_user_path
-          i.icon-cogs> 
-          = t('views.navigation.account')
-      li
-        = link_to billing_user_path
-          i.icon-exclamation-sign> 
-          = t('views.navigation.billing')
-    .row
-      .span10
-        h2 = t("views.users.account.account")
+.row
+  .span10
+    h2 = t("views.users.account.account")
