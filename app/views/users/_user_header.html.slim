@@ -11,7 +11,7 @@ ul.nav.nav-tabs
     = link_to reservations_user_path
       i.icon-group> 
       = t('views.navigation.reservations')
-  li class=("active" if ['account', 'get_verify_phone'].include? action_name )
+  li class=("active" if Set['account', 'get_verify_phone'].include? action_name )
     = link_to account_user_path
       i.icon-cogs> 
       = t('views.navigation.account')

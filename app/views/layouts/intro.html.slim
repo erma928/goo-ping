@@ -1,0 +1,40 @@
+= content_for :content do
+  #page
+    .container.mainPage
+      .how-it-works
+        ul.nav.nav-tabs.nav-how-it-works
+          li class=("active" if action_name == 'join_activity_intro')
+            = link_to join_activity_intro_path
+              h2.color-owner = t("views.intro.join_activity")
+          li class=("active" if action_name == 'organize_activity_intro')
+            = link_to organize_activity_intro_path
+              h2.color-owner = t("views.intro.organize_activity")
+          li class=("active" if action_name == 'show_talent_intro')
+            = link_to show_talent_intro_path
+              h2.color-renter = t("views.intro.show_talent")
+          li class=("active" if action_name == 'share_property_intro')
+            = link_to share_property_intro_path
+              h2.color-renter = t("views.intro.share_property")
+        .span12
+          .pull-left.span5.intro-key
+            p = t("views.intro.gooping_intro")
+            ul.key-perks
+              li.color-owner
+                i.icon-check
+                =< t("views.intro.join_activity_benefits")
+              li.color-owner
+                i.icon-check
+                =< t("views.intro.organize_activity_benefits")
+              li.color-renter
+                i.icon-check
+                =< t("views.intro.show_talent_benefits")
+              li.color-renter
+                i.icon-check
+                =< t("views.intro.share_property_benefits")
+          .pull-left.photoframe15.intro-video
+            / embed youtube video in iframe
+            iframe 
+        hr.span12
+        / introduction content for each action
+        = yield
+= render template: 'layouts/application'                

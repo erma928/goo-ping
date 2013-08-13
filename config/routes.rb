@@ -20,10 +20,10 @@ GooPing::Application.routes.draw do
   get 'show_talent', to:'home#index', as: :show_talent
   get 'share_property', to:'home#index', as: :share_property
   
-  get 'join_activity_intro', to:'home#index', as: :join_activity_intro
-  get 'organize_activity_intro', to:'home#index', as: :organize_activity_intro
-  get 'show_talent_intro', to:'home#index', as: :show_talent_intro
-  get 'share_property_intro', to:'home#index', as: :share_property_intro
+  get 'join_activity_intro', to:'home#join_activity_intro', as: :join_activity_intro
+  get 'organize_activity_intro', to:'home#organize_activity_intro', as: :organize_activity_intro
+  get 'show_talent_intro', to:'home#show_talent_intro', as: :show_talent_intro
+  get 'share_property_intro', to:'home#share_property_intro', as: :share_property_intro
 
   get 'news_recreational_content', to:'home#index', as: :news_recreational_content
   get 'news_professional_content', to:'home#index', as: :news_professional_content
