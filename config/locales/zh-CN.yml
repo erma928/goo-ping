@@ -31,6 +31,11 @@ zh-CN:
       reservations: 我的活动
       account: 我的帐户
       billing: 我的帐单
+    intro:
+      join_activity: 参加活动
+      organize_activity: 组织活动
+      show_talent: 展示才华
+      share_property: 出租场所
     footer:
       partners: 合作伙伴
       about_us: 关于谷拼

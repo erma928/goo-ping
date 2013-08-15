@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
-  layout :resolve_layout
+  layout 'intro', only: [:join_activity_intro, :organize_activity_intro, 
+                          :show_talent_intro, :share_property_intro]
   
   def index
     @featured_activities = Array.new
@@ -15,12 +16,6 @@ class HomeController < ApplicationController
   def show_talent_intro; end
   
   def share_property_intro; end
-  
-  private
-  
-  def resolve_layout
-    action_name.include?("_intro")? 'intro': 'application'
-  end
   
 end
 
