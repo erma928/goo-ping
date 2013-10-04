@@ -1,7 +1,7 @@
 Goo Ping
 ========================
 
-*** Quick start
+### Quick start
 
 1. install RVM and ruby
 
@@ -10,7 +10,7 @@ Goo Ping
 3. rails s
 
 
-*** Internationalization
+### Internationalization
 
 supports Chinese simplified and English
 use set_locale param in the url to switch between the two:
